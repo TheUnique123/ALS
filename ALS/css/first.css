@@ -1,3 +1,23 @@
+.navbar-nav{
+  margin-left: 60%;
+}
+
+.ban{
+  height: 400px;
+}
+
+.epic1{
+  width: 510px;
+  height: 350px;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.ejus{
+  text-align: justify;
+}
+
+
 .s_size{
   font-size: xx-large;
 }
