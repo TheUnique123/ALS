@@ -21,3 +21,9 @@
 .s_size{
   font-size: xx-large;
 }
+
+/* Donation CSS Start  */
+
+.background{
+  background-image: url(../media/background_donation.png);
+}
