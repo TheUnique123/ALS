@@ -1,4 +1,4 @@
-.navbar-nav{
+/* .navbar-nav{
   margin-left: 60%;
 }
 
@@ -20,10 +20,58 @@
 
 .s_size{
   font-size: xx-large;
-}
+} */
 
 /* Donation CSS Start  */
-
-.body{
-  background-image: url('../media/background_donation.png');
+*{
+  padding: 0;
+  margin: 0;
 }
+
+.container_custom{
+  width: 98vw;
+}
+
+.mother_bg{
+  width: 100%;
+  height: 100vh;
+  background-image: url('../media/background_donation.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.mother_nav{
+  /* background-color: rgba(0, 0, 0, 0.993); */
+}
+
+.logo_img{
+  width: 130px;
+  height: 130px;
+  border-radius: 0 0 10px 10px;
+}
+
+.donation, .adoption{
+  background-color: #e25b45;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adoption{
+  background-color: ;
+}
+
+.txt_dec{
+  text-decoration: none;
+  color: white;
+}
+
