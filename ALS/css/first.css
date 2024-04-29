@@ -51,14 +51,22 @@
   /* background-color: rgba(0, 0, 0, 0.993); */
 }
 
-.logo_img{
+.logo{
+  background-color: #adc762;
   width: 130px;
   height: 130px;
   border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
+.logo_img{
+  width: 100%;
+  height: 100%;
+  
 }
 
 .donation, .adoption{
-  background-color: #e25b45;
+  background-color: #adc762;
   width: 150px;
   height: 50px;
   border-radius: 0 0 10px 10px;
@@ -67,9 +75,6 @@
   align-items: center;
 }
 
-.adoption{
-  background-color: ;
-}
 
 .txt_dec{
   text-decoration: none;
@@ -79,4 +84,18 @@
 .txt_dec:hover{
   color: white;
 }
+
+.l_txt{
+  background-color: rgba(255, 255, 255, 0.582);
+  color: black;
+  width: 50%;
+}
+
+.r-txt{
+  background-color: #aec762;
+  color: white;
+  width: 40%;
+}
+
+/* Navbar End  */
 
