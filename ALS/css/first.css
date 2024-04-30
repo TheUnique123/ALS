@@ -26,6 +26,7 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .container_custom{
@@ -85,6 +86,18 @@
   color: white;
 }
 
+/* Navbar End  */
+
+/* Body Start  */
+
+/* Donation Start  */
+.font_donate1{
+  font-family: "Recursive", sans-serif;
+}
+
+.font_donate2{
+  font-family: "Lugrasimo", cursive;
+}
 .l_txt{
   background-color: rgba(255, 255, 255, 0.582);
   color: black;
@@ -95,7 +108,48 @@
   background-color: #aec762;
   color: white;
   width: 40%;
+  position: relative;
 }
 
-/* Navbar End  */
+.vine{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.am_box{
+  width: 70px;
+  height: 40px;
+  padding: 5px 0;
+  padding-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 2;
+}
+
+.amt_box{
+  width: 70px;
+  height: 40px;
+  padding: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 2;
+}
+
+.amount_type{
+  padding-left: 2px;
+  width: 55px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.mtm_h{
+  line-height: 90%;
+}
+
+/* Donation End  */
+
+/* Body End  */
+
 

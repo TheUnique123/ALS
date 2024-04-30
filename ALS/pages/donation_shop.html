@@ -7,6 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link rel="stylesheet" href="../css/first.css">
+    <!-- First Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
+    <!-- Second Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
+    <!-- Third Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lugrasimo&family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
 
   </head>
   <body>
@@ -40,31 +52,47 @@
             <!-- donation part  -->
     
             <div class="r-txt p-3">
+              <svg class="vine" height="210" width="400" xmlns="http://www.w3.org/2000/svg">
+                <path d="M150 5 L75 200 L225 200 Z"
+                style="fill:none;stroke:green;stroke-width:3" />
+              </svg>
               <div>
-                <h1>Start Donating & <br>
-                  Start Getting Your Gifts</h1>
+                <h2><span class="font_donate1">Start Donating</span> <span class="font_donate2">&</span> <br>
+                  Start Getting Your Gifts</h2>
                   <p>Please </p>
               </div>
               <div>
-                <h2>Choose Your Amount!</h2>
-                <div>
-                  <div>$15</div>
-                  <div>$25</div>
-                  <div>$50</div>
-                  <div>$100</div>
+                <h5>Choose Your Amount!</h5>
+                <div class="d-flex mt-2">
+                  <div class="am_box bg-white text-dark me-2">$15</div>
+                  <div class="am_box bg-white text-dark me-2">$25</div>
+                  <div class="am_box bg-white text-dark me-2">$50</div>
+                  <div class="am_box bg-white text-dark ">$100</div>
                 </div>
-                <div>
-                  <div>$250</div>
-                  <div>$300</div>
-                  <div>$500</div>
-                  <div>
-                    <input type="text">
+                <div class="d-flex mt-2 mb-2">
+                  <div class="am_box bg-white text-dark me-2">$250</div>
+                  <div class="am_box bg-white text-dark me-2">$300</div>
+                  <div class="am_box bg-white text-dark me-2">$500</div>
+                  <div class="amt_box bg-white text-dark me-2">
+                    <input class="amount_type" type="text" placeholder="$">
+                  </div>
+                </div>
+                
+              </div>
+
+              <div>
+                <h5 class="mt-4 mtm_h">Make IT Monthly!</h5>
+                <div class="row">
+                  <div class="rounded-start py-2 text-center col-lg-6 bg-primary">
+                    Yes, Lets DO IT!
+                  </div>
+                  <div class="rounded-end py-2 text-center col-lg-6 bg-secondary">
+                    No, Donate Once
                   </div>
                 </div>
                 
               </div>
               
-              <h3>Make IT Monthly!</h3>
 
     
             </div>
