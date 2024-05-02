@@ -26,11 +26,12 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: "Josefin Sans", sans-serif;
+ 
 }
 
 .container_custom{
   width: 98vw;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .mother_bg{
@@ -161,6 +162,12 @@
 
 .mim_box{
   z-index: 2;
+  background-color: #9AC8CD;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+.pwc_main{
+  background-color: #0E46A3;
 }
 
 /* Donation End  */
