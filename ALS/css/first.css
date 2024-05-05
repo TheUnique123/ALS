@@ -33,6 +33,7 @@
 .container_custom{
   width: 98vw;
   font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .mother_bg{
@@ -248,6 +249,12 @@
 
 /* Poster START  */
 
+.poster_section{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+}
+
 .poster{
   position: relative;
   top: -200px;
@@ -257,24 +264,70 @@
 .wlp{
   position: absolute;
   width: 500px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
 }
 
 .clm{
   position: absolute;
-  width: 100px;
-  /* top: -50px; */
+  width: 150px;
+  left: -30px;
+  top: -50px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
+  transition: transform 200ms ease-in;
 }
 
 .sas{
   position: absolute;
-  width: 150px;
-  /* top: 50px; */
+  width: 100px;
+  top: 500px;
+  left: -90px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
+  transition: transform 200ms ease-in-out;
 }
 
 .sta{
   position: absolute;
   width: 200px;
+  top: 90px;
+  left: 400px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px black;
+  transition: transform 200ms ease-out;
 }
+
+.clm:hover{
+  transform: scale(1.2);
+}
+
+.sas:hover{
+  transform: scale(1.2);
+}
+
+.sta:hover{
+  transform: scale(1.2);
+}
+
+/* Shot Text  */
+
+.shp_txt{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shp_txt_inner{
+  color: white;
+  background-color: #adc762;
+  padding: 20px 20px 10px 20px;
+  border-radius: 10px;
+
+}
+
+/* Shop Text  */
 
 /* POSTER END  */
 
