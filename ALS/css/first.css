@@ -317,6 +317,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 0 50px 0 20px;
+  margin-top: 70px;
 }
 
 .shp_txt_inner{
@@ -327,11 +330,31 @@
 
 }
 
+.fa-chevron-down{
+  font-size: 3rem;
+}
+
 /* Shop Text  */
 
 /* POSTER END  */
 
 /* Donation End  */
+
+/* Shop Start  */
+
+.product_rows{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product{
+  background-color: black;
+  width: 290px;
+  height: 390px;
+}
+
+/* Shop End  */
+
 
 /* Body End  */
 
