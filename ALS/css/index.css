@@ -11,6 +11,7 @@ body{
 /*  background: white;*/
 }
 
+
 /*START OF NAV*/
 
 /*.header {
@@ -35,7 +36,7 @@ body{
   color: #EAE7D9;
   padding: 20px 20px;
 }
-.navbar a{
+.nav-link{
   position: relative;
   font-size: 20px;
   color: #140303;
@@ -55,9 +56,14 @@ body{
 /*drop downmenu*/
 .dropdown-menu{
   background: #1E6B7F;
+  border: solid 2px #140303;
 }
 .dropdown .btn{
-  background: #1E6B7F;
+  /* border: none;
+  padding: 9.5px; */
+
+  border: solid 2px #140303;
+  border-radius: 5px;
   border: none;
   padding: 9.5px;
 }
@@ -71,57 +77,19 @@ body{
   background: #259F6C;
   transition: 0.5;
 }
+.active{
+  background-color: #1E6B7F;
+  border: solid 2px white;
+  color: white;
+}
 /*END OF NAV*/
 
-/*END OF NAV*/
 
-/*START OF BANNER*/
-/*.anibanner{
-  clip-path: polygon(0% 11.25%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  background: #442727;
-  background-image: url(../images/anibannerbg.jpg);
-  background-size: cover;
-  border-radius: 30px;
-  height: auto;
-  width: 100%;
-  color: #00FFDD;
-}
-.anibanner p{
-  font-size: 20px;
-  color: #2FA4FF;
-}
-.anibannerimage{
-  height: auto;
-}
-.anitextbox{
-
-  align-content: center;
-  text-align: center;
-}
-.changepages{
-  display: flex;
-  background: #EAE7D9;
-  width: 340px;
-  border-radius: 20px;
-}
-.changepages img{
-  width: 50px;
-  height: 70px;
-
-}
-.changepages ul{
-  background: #EAE7D9;
-}
-.changepages li{
-  list-style: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-}*/
+/*START OF BANNERSEC*/
 .bannersec{
   clip-path: polygon(0% 11.25%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
-/*  background: #442727;*/
-  background-image: url(../images/anibannerbg.png);
-  background-size: cover;
+  /* background: ; */
+  background: linear-gradient( #140303, black);
   width: 100%;
   height: auto;
   border-radius: 30px;
@@ -142,15 +110,11 @@ body{
   margin: 20px;
 /*  font-weight: bold;*/
 }
-.content .textBox h1{
-  font-family: "Lobster", sans-serif;
-  font-size: 60px;
-  font-weight: 400;
-  color: #0c907d;
-  -webkit-text-fill-color: #259F6C;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-/*  text-transform: uppercase;*/
+.content .textBox h2{
+  color: #0C907D;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
 }
 .content .textBox h2 span{
 /*  color: #EAE7D9;*/
@@ -158,11 +122,8 @@ body{
   font-size: 35px;
 }
 .textBox p{
-/*  color: #259F6C;*/
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1.2px;
-  -webkit-text-stroke-color: black;
-  font-weight: 700;
+  color: #F2F4B2;
+  font-size: 15px;
 }
 .imagebox img{
   height: 500px;
@@ -174,7 +135,7 @@ body{
     border-radius: 20px;
 }
 .learnmore{
-  background: beige;
+  background: #CCE490;
   padding: 10px 10px;
   color: #442727;
   border-radius: 10px;
@@ -183,59 +144,124 @@ body{
 }
 .learnmore:hover{
   color: black;
-  background: #8B9A46;
+  background: #0D627A;
   transition: 1s;
+}
+/*END OF BANNER*/
+
+/*CHANGEPAGESBOX*/
+.changepages li{
+  display: inline-block;
+  list-style: none;
+/*  margin: 0 20px;*/
+}
+/*.changepages{
+  position: absolute;
+  top: 80%;
+  right: 76%;
+  display: flex;
+  transform: translate(20%);
+  background: #937D14;
+  border-radius: 30px;
+  padding: 5px 5px;
+}*/
+.changepages{
+  background: #937D14;
+  border-radius: 10px;
+  padding: 3px 3px;
+}
+.changepages li img{
+  width: 50x;
+  height: 70px;
+  filter: invert(100%) sepia(90%) saturate(678%) hue-rotate(298deg) brightness(112%) contrast(83%);
+}
+.changepages img:hover{
+  filter: invert(10%) sepia(11%) saturate(5371%) hue-rotate(325deg) brightness(88%) contrast(78%);
+  transition: 0.5s;
 }
 
 /*END OF CHANGEPAGES*/
 
-/*WILDLIFE BANNER START*/
 
-/*END OF WILDLIFE BANNER*/
-.wildlifeban .bannersec{
-  background-image: url('../images/tigerbg.jpg');
-}
-.wildlifeban .content .textBox h1{
-  color: #90D26D;
-}
-/*END OF BANNER*/
-
-
-/*START OF INFORMATION BANNER*/
-.infobanner{
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-}
-.infobanner img{
-  width: 450px;
-  border-radius: 20px;
-}
-.infotxt h1{
-  font-family: "Lobster", sans-serif;
-  color: #CCE490;
-  text-align: center;
-}
-.infotxt{
+/*START OF ABOUTUS BANNER*/
+.aboutusbanner{
+/*  clip-path: polygon(0% 11.54%, 14.84% 1.51%, 29.29% 11.54%, 47.55% 1.51%, 64.24% 11.24%, 82.19% 1.51%, 100.1% 11.54%, 100% 73.38%, 81.55% 85.71%, 64.55% 72.08%, 47.55% 85.71%, 30.52% 72.08%, 14.84% 85.71%, 0% 72.08%);*/
+/*  background-color: #442727;*/
   width: 100%;
-  padding: 72px 70px;
-  text-align: left;
-  align-content: center;
-  color: white;
-  border-radius: 20px;
-  background: linear-gradient(#140303, black);
+  height: auto;
+  border-radius: 30px;
+  display: flex;
+  padding: 50x;
+
 }
-/*END OF INFORMATION BANENR*/
+.aboutustextbox{
+  display: inline-block;
+  align-content: center;
+  text-align: center;
+  padding: 60px;
+  background: ;
+  background: linear-gradient( #1E6B7F, #259F6C);
+  color: #F2F4B2;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.aboutustextbox h1{
+  color: #140303;
+}
+.aboutusbanner p{
+  color: #D2C6B2;
+  font-size: 20px;
+}
+.aboutusbanner img{
+/*  padding: 50px 10px;*/
+/*width: 400px;*/
+
+}
+.aboutusbanner video{
+  border-radius: 20px;
+  width: 300px;
+  align-self: center;
+}
+/*END OF ABOUT US BANNER*/
+
+/*START OF DONATION*/
+.donationbanner{
+  clip-path: polygon(0% 0%, 85% 1%, 100% 50%, 85% 100%, 0% 100%);
+/*  background-color: #D6B885;*/
+  background-image: url('../images/donationbgtrans.png');
+  height: 100%;
+  width: auto;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+.donationtxtbox1{
+  margin-left: 100px;
+}
+.donationbanner h1{
+  -webkit-text-fill-color: #259F6C;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #0D627A;
+  font-weight: 800;
+}
+.donationbanner img{
+  width: 400px;
+}
+
+/*END OF DONATION*/
 
 /*START OF ARTICLES*/
 .articlesbanner{
 
 }
 .card-title{
-  color: beige;
+  color: #140303;
 }
 .card-text{
-  color: #D2C6B2;
+  color: #CCE490;
+}
+.articlesbanner img{
+  height: 50%;
 }
 .articlesbanner .card{
   width: 25rem;
@@ -245,29 +271,20 @@ body{
 }
 .articlesbanner h2{
   text-align: center;
-  font-family: "Lobster", sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  -webkit-text-fill-color: #259F6C;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  font-weight: 400;
+  color: #140303;
 }
 .articlebanner .button{
 background: beige;
 }
 
-/*WILDLIFE ARITCLES SART*/
-.articlewild .card{
-  background: linear-gradient( #1E6B7F, #259F6C);
-}
-/*.articlewild .articlesbanner h2{
-  -webkit-text-fill-color: #90D26D;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #D06224;
-}*/
-/*END OF WILDLIFE ARTTICLES*/
 /*END OF ARTICLES*/
+
+/*START OF ADOPTION*/
+.adoptionbanner video{
+  width: 100%;
+  height: 80vh;
+}
+/*END OF ADOPTION*/
 
 /*START OF FOOTER*/
 .fa-brands{
@@ -278,10 +295,6 @@ background: beige;
 .fa-brands:hover{
   color: #D2C6B2;
   transition: 0.5s;
-}
-/*STRAT OF STRAY*/
-.straylifeban .bannersec{
-  background-image: url('../images2/straybg.jpg')
 }
 /*.fa-brands*/
 footer{
