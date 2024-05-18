@@ -13,6 +13,19 @@ body{
 
 /* About Us CSS  Start */
 
+/*START OF NAV*/
+/*.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: seagreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}*/
 .navbar img{
   width: 70px;
 }
@@ -32,21 +45,17 @@ body{
   border: solid 2px #140303;
   border-radius: 5px;
 }
- 
 .navbar a:hover{
   color: white;
   transition: 0.5s;
   border: solid 2px white;
 }
-
 /*drop downmenu*/
 .dropdown-menu{
   background: #1E6B7F;
-  border: solid 2px #140303;
 }
 .dropdown .btn{
-  border: solid 2px #140303;
-  border-radius: 5px;
+  background: #1E6B7F;
   border: none;
   padding: 9.5px;
 }
@@ -60,76 +69,114 @@ body{
   background: #259F6C;
   transition: 0.5;
 }
-
-.active{
-  background-color: #1E6B7F;
-}
 /*END OF NAV*/
 
+ 
+.banner-container{
+	width: 100%;
+	min-height: 100vh;
+}
+ 
 .banner{
-	width: 200vh;
-	margin: 20px auto;
-	padding: 20px;
-	height: 250px;
-	background: #937D14;
-	border-radius: 25px;
+	width: 100%;
+	height: auto;
+	background-image: url("Bird.jpg");
+	background-size: cover;
+	background-position: 69%;
+	border-radius: 10px;
+}
+
+.banner-trans{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+ 
+.banner-text{
+	padding-top: 200px;
+	margin-left: 50px;
+	padding-bottom: 100px;
+}
+ 
+.banner-text h2{
+	letter-spacing: 10px;
+	font-weight: bold;
+	font-size: 55px;
+	color: #FAFCD6;
+}
+ 
+.banner-text h1{
+	margin-left: 5px;
+	font-size: 22px;
+	padding-right: 50%;
+	color: #d4e7ed ;
+ 
+}
+ 
+
+ 
+.card-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 100px;
+}
+ 
+.animal_card{
+	width: 325px;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	margin: 20px;
+}
+ 
+.animal_card img{
+	width: 100%;
+	height: auto;
+}
+ 
+.animal-card-content{
+padding: 16px;
+}
+ 
+.animal-card-content h3{
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+ 
+.animal-card-content p{
+	color: #666;
+	font-size: 15px;
+	line-height: 1.3;
+}
+ 
+.animal-card-content .btn{
+	display: inline-block;
+	padding: 8px 16px;
+	background: #333;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 16px;
+	color: #fff;
+}
+
+ 
+.textbox{
+	padding: 0 300px;
+}
+ 
+.textbox p{
 	font-size: 18px;
+	color: #585858;
 }
-
-.banner2{
-	width: 200vh;
-	margin: 20px auto;
-	padding: 10px;
-	height: 55vh;
-	background: #937D14;
-	border-radius: 25px;
-}
-
-
-.Img_container{
-	position: relative;
-	border-radius: 25px;
-	width: 200vh;
-	left: 30px;
-	height: 52vh;
-	background: #D2C6B2;
-	
-
-}
-
-.card{
-  display: flex;
-}
-
-.card img {
-	width: 60vh;
-	height: 52vh;
-	float: left;
-	border-radius: 25px;
-	margin-right: 20px;
-}
-
-.card-content{
-  width: 40vw;
-}
-
-.text {
-	font-size: 18px;
+ 
+.textbox h1{
+	color: #7da10d ;
+	font-size: 50px;
 	text-align: center;
 }
-
-.abouts_text{
-	margin-top: 20px;
-	margin-left: 25px;
-	padding: 15px;
-	border-radius: 25px;
-	width: 200vh;
-	height: 50vh;
-	background: gray;
-	text-align: center;
-}
-
-
+ 
 .team{
 	position: relative;
 	width: 100%;
@@ -143,12 +190,19 @@ body{
 	width: 100%;
 	max-width: 1350px;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto)); */
 	align-items: center;
-	gap: 2rem;
+	gap: 1rem;
 	text-align: center;
 	margin-top: 4rem;
+  box-sizing: border-box;
+  padding: 0 5%;
+}
+.two-mem{
+  display: flex;
+  width: 50%;
+  gap: 1%;
 }
 .team-content img{
 	width: 100%;
@@ -163,9 +217,9 @@ body{
 }
 .box{
 	padding: 16px;
-	/* background: ; */
 	border-radius: 15px;
 	transition: all .38s ease;
+  box-sizing: border-box;
 }
 .box h3{
 	font-size: 23px;
@@ -176,10 +230,12 @@ body{
 .box h5{
 	font-size: 15px;
 	font-weight: 600;
-	color: #b7b4bb;
+	color: #585858;
 	margin-bottom: 15px;
 	letter-spacing: 2px;
+  transition: text-shadow 90ms ease-in;
 }
+ 
 .icons i{
 	display: inline-block;
 	color: black;
@@ -187,6 +243,39 @@ body{
 	margin: 0 8px;
 	transition: all .38s ease;
 }
+
+.inter_txt h1{
+  text-decoration: underline;
+}
+
+.meet_video{
+  width: 73vw;
+  border: 10px solid #259F6C;
+}
+
+.banner2{
+	width: 100vw;
+	height: auto;
+}
+
+.banner2_left{
+  flex-direction: column;
+  padding: 5% 0 5% 10%;
+}
+
+.banner2_img_div{
+  width: 380px;
+  height: 380px;
+  border: 3px solid #442727;
+  border-radius: 10px;
+}
+
+.banner2_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 .icons i:hover{
 	transform: scale(1.2);
 }
@@ -195,6 +284,15 @@ body{
 	cursor: pointer;
 }
 
+.box h3:hover{
+  font-weight: bolder;
+}
+
+.box h5:hover{
+  text-shadow: 0 0 1px black;
+}
+
+ 
 @media(max-width: 1240px){
 	.team{
 		width: 100%;
@@ -204,9 +302,41 @@ body{
 	.center h1{
 		font-size: 3.2rem;
 	}
+	.Img_container{
+		flex-direction: column;
+	}
+	.abouts_text{
+		flex-direction: column;
+	}
+  .team-content{
+    flex-direction: column;
+  }
+  .two-mem{
+    width: 100%;
+  }
 }
-
-/*START OF FOOTER*/
+@media screen and (max-width: 992px){
+  .banner2{
+    flex-direction: column;
+  }
+  .banner2_left{
+    padding: 10% 10% 0 10%;
+    text-align: center;
+  }
+  .team-content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .two-mem{
+    flex-direction: column;
+    align-items: center;
+  }
+  .box_mt{
+    margin-top: 13px;
+  }
+}
+ 
+ 
 .fa-brands{
   font-size: xx-large;
   margin: 5px;
@@ -236,7 +366,7 @@ footer{
   color: #EAE7D9;
   text-decoration: none;
   font-size: 20px;
-
+ 
 }
 /* .footerlist{
   margin: ;
@@ -245,6 +375,7 @@ iframe{
   width: 100%;
   height: 100%;
 }
+
 /*END OF FOOTER*/
 /* END OF ABOUT US */
 
@@ -1134,7 +1265,6 @@ iframe {
 .pwc_main:hover{
   background-color: rgba(0, 0, 0, 0.274);
   color: white;
-  /* border: px solid white; */
 }
 
 .card_design{
@@ -1359,6 +1489,22 @@ iframe {
 
 /* Shop Start  */
 
+.add_to_cart{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 80px;
+  
+}
+
+.fa-cart-shopping{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .ls{
  display: inline-block;
  border: 1px solid black;
@@ -1398,6 +1544,28 @@ iframe {
   width: 290px;
   height: 450px;
   padding: 10px;
+  position: relative;
+}
+
+.product_disable{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(220, 210, 200, 0.5);
+  display: none;
+}
+
+.thank_for_buying{
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  top: 18%;
+  left: 30%;
+  display: none;
+  z-index: 10;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1));
 }
 
 .img_prodcut{
@@ -1421,6 +1589,10 @@ iframe {
   line-height: 110%;
 }
 
+/* SHOP END  */
+/* BODY END  */
+
+/* MEDIA QUERRY START */
 @media screen and (max-width: 1300px) {
   .donate_title{
     font-size: 1.5rem;
@@ -1500,6 +1672,13 @@ iframe {
 
 
 @media screen and (max-width: 992px) {
+  .vine{
+    position: absolute;
+    top: 600px;
+    left: 0;
+    width: 100vw;
+    height: 170vh;
+  }
   .donation_main{
     height: 1200px;
     flex-direction: column;
@@ -1524,6 +1703,8 @@ iframe {
   .left_info{
     width: 100%;
     height: 300px;
+    text-align: center;
+    padding: 5% 10% 0 10%;
   }
 
   .right_info{
@@ -1532,13 +1713,19 @@ iframe {
     padding: 20% 10% 0 10%;
   }
   .poster_section{
-    height: 1000px;
+    height: 780px;
     flex-direction: column;
   }
 
   .poster{
     position: relative;
-    top: -150px;
+    top: -90px;
+    left: 30%;
+  }
+
+  .shp_txt{
+    margin-top: 400px;
+    height: 50%;
   }
 
   .product_rows{
@@ -1559,18 +1746,48 @@ iframe {
     height: 560px;
     margin: 30px 0 0 0;
   }
-}
-
-@media screen and (max-width: 780px) {
-  .r-txt{
-    clip-path: circle(100% at 50% 95%);
+  .thank_for_buying{
+    left: 25%;
   }
 }
 
-/* Shop End  */
+@media screen and (max-width: 780px) {
+  .vine{
+    position: absolute;
+    top: 580px;
+    left: 0px;
+    width: 100vw;
+    height: 160vh;
+  }
 
+  .r-txt{
+    clip-path: circle(100% at 50% 95%);
+  }
 
-/* Body End  */
+  .poster_section{
+    height: 830px;
+    flex-direction: column;
+  }
+
+  .poster{
+    position: relative;
+    top: -90px;
+    left: 25%;
+  }
+
+  .shp_txt{
+    margin-top: 400px;
+    margin-left: 20px;
+  }
+  .thank_for_buying{
+    left: 20%;
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/* MEDIA QUERRY END */
+
 
 
 

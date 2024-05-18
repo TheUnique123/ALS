@@ -38,6 +38,23 @@
     />
   </head>
   <body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+          <button type="button" class="btn-close close_buy" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary buy_confirm" data-bs-dismiss="modal">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="../media/thank_for_buying.png" alt="thank_for_buying_img" class="thank_for_buying" />
     <div class="container_custom">
       <div class="mother_bg">
         <div class="bg">
@@ -76,22 +93,23 @@
           />
           <div class="info_div">
             <div class="left_info">
-              <h1 class="pt-2">Should you Donate!?</h1>
-              <p>
-                <i class="fa-solid fa-paw"></i> Your compassionate support for
-                animal welfare will directly impact the lives of our furry
-                friends, providing them with the love, care, and resources they
-                need to thrive in a world where they too deserve our protection
-                and kindness. <br />
-                <i class="fa-solid fa-paw"></i> By donating to our cause, you're
-                also giving a second chance to stray animals in need, offering
-                them warmth, shelter, and the chance to find loving homes where
-                they'll be cherished companions.
-                <br />
-                <i class="fa-solid fa-paw"></i> Your generosity can transform
-                their lives and bring hope to those who have been abandoned and
-                forgotten.
-              </p>
+              <h1 class="pt-2">Should you Donate?</h1>
+                <p><i class="fa-solid fa-paw"></i> Your compassionate support for
+                  animal welfare will directly impact the lives of our furry
+                  friends, providing them with the love, care, and resources they
+                  need to thrive in a world where they too deserve our protection
+                  and kindness.
+                </p class="my-md-2">
+                <p><i class="fa-solid fa-paw"></i> By donating to our cause, you're
+                  also giving a second chance to stray animals in need, offering
+                  them warmth, shelter, and the chance to find loving homes where
+                  they'll be cherished companions.
+                </p>
+                <p>
+                  <i class="fa-solid fa-paw"></i> Your generosity can transform
+                  their lives and bring hope to those who have been abandoned and
+                  forgotten.
+                </p>
             </div>
             <div class="right_info">
               <div class="amount_area">
@@ -214,8 +232,9 @@
                   alt="gift_pic(2)"
                 /> 
               </div> 
+              <!-- AMOUNT END  -->
 
-              <!-- Pay with card pop up  -->
+              <!-- Pay with card pop up START  -->
               <div class="col-lg-11 payment_area">
                 <div class="d-flex">
                   <div class="col-lg-3 to_amount">1-Amount</div>
@@ -308,7 +327,9 @@
                     </form>
                   </div>
               </div>
+              <!-- Pay With Card Pop Up End  -->
 
+              <!-- Gift Section Start  -->
               <div class="gift_area col-lg-11">
                 <div class="d-flex">
                   <div class="col-lg-3 to_amount">1-Amount</div>
@@ -321,7 +342,7 @@
                   <div class="gifts ps-4">
                     <div class="d-flex align-items-center gift_mom">
                       <input type="radio" id="paw_plush" name="drone" value="paw_plush" checked />
-                      <label for="paw_plush" class="mx-2">Paw Plush</label>
+                      <label for="paw_plush" class="mx-2 fs-3">Paw Plush</label>
                       <div class="gift_img_div">
                         <img src="../media/Paw_plush.PNG" alt="gift_1_img">
                       </div>
@@ -329,7 +350,7 @@
                   
                     <div class="d-flex align-items-center my-2 gift_mom">
                       <input type="radio" id="tote" name="drone" value="tote" />
-                      <label for="tote" class="mx-2">Tote</label>
+                      <label for="tote" class="mx-2 fs-3">Tote</label>
                       <div class="gift_img_div">
                         <img src="../media/Tote.png" alt="gift_2_img">
                       </div>
@@ -346,6 +367,7 @@
                     <div class="btn btn-primary col-lg-8 mt-3 choose_btn">Done</div>
                   </div>
                 </div>
+                <!-- Gift Section END  -->
             </div>
           </div>
           </div>
@@ -356,7 +378,7 @@
 
       <div class="poster_section d-flex">
         <div class="col-lg-6 col-md-12">
-          <div class="poster bg-dark">
+          <div class="poster">
             <img
               class="wlp"
               src="../media/poster1.png"
@@ -369,7 +391,7 @@
         </div>
 
         <!-- shop text  -->
-        <div class="shp_txt col-lg-6 col-md-12">
+        <div class="shp_txt col-lg-6 col-md-12 col-sm-12">
           <div class="text-center shp_txt_inner">
             <h2>SHOP BELOW!?</h2>
             <p>
@@ -401,6 +423,10 @@
           <div class="d-flex justify-content-center">
             <h1 id="come_here" class="text-center ls">Let's Shop!</h1>
           </div>
+          <!-- will be continuing this in js -->
+          <div class="add_to_cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa-solid fa-cart-shopping buy_now"> <span class="shop_amount">0</span></i>
+          </div>
         </div>
 
         <!-- product rows -->
@@ -408,13 +434,16 @@
         <div class="product_rows">
           <div class="product_second_row left_row">
             <div class="product">
+              <div class="product_disable">
+
+              </div>
               <div class="img_prodcut">
                 <img src="../media/whale.png" alt="whale_plushy" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Whale</h5>
-                  <h5>$20</h5>
+                  <h5 class="product_type">Whale</h5>
+                  <h5 class="product_amount">$20</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -430,13 +459,16 @@
               </button>
             </div>
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/Panda.png" alt="Panda_plushy" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Panda</h5>
-                  <h5>$15</h5>
+                  <h5 class="product_type">Panda</h5>
+                  <h5 class="product_amount">$15</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -454,13 +486,16 @@
           </div>
           <div class="product_second_row right_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/Giraffe.png" alt="Giraffe_plush" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Giraffe</h5>
-                  <h5>$12</h5>
+                  <h5 class="product_type">Giraffe</h5>
+                  <h5 class="product_amount">$12</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -477,13 +512,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/Cat_plushy.png" alt="cat_plushy" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Cat-Shark</h5>
-                  <h5>$25</h5>
+                  <h5 class="product_type">Cat-Shark</h5>
+                  <h5 class="product_amount">$25</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -505,13 +543,16 @@
         <div class="product_rows">
           <div class="product_second_row left_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/t-shirt.png" alt="T-shirt" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>T-shirt</h5>
-                  <h5>$35</h5>
+                  <h5 class="product_type">T-shirt</h5>
+                  <h5 class="product_amount">$35</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -525,13 +566,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/hoddie.png" alt="Hoddie" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Hoddie</h5>
-                  <h5>$40</h5>
+                  <h5 class="product_type">Hoddie</h5>
+                  <h5 class="product_amount">$40</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -546,13 +590,16 @@
           </div>
           <div class="product_second_row right_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/sleeve.png" alt="long_sleeve" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Long Sleeve</h5>
-                  <h5>$37</h5>
+                  <h5 class="product_type">Long Sleeve</h5>
+                  <h5 class="product_amount">$37</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -566,13 +613,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/cap.png" alt="cap" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>cap</h5>
-                  <h5>$17</h5>
+                  <h5 class="product_type">cap</h5>
+                  <h5 class="product_amount">$17</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -591,13 +641,16 @@
         <div class="product_rows">
           <div class="product_second_row left_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/umbrella.png" alt="umbrella" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Umbrella</h5>
-                  <h5>27$</h5>
+                  <h5 class="product_type">Umbrella</h5>
+                  <h5 class="product_amount">27$</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -611,13 +664,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/cup.png" alt="cup" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Cup</h5>
-                  <h5>$30</h5>
+                  <h5 class="product_type">Cup</h5>
+                  <h5 class="product_amount">$30</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -634,13 +690,16 @@
           <div class="product_second_row right_row">
 
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/book.png" alt="book" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Note Book</h5>
-                  <h5>$15</h5>
+                  <h5 class="product_type">Note Book</h5>
+                  <h5 class="product_amount">$15</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -654,13 +713,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/back_pack.png" alt="back_pack" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Backpack</h5>
-                  <h5>$20</h5>
+                  <h5 class="product_type">Backpack</h5>
+                  <h5 class="product_amount">$20</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -680,13 +742,16 @@
         <div class="product_rows">
           <div class="product_second_row left_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/pet_collar.png" alt="pet_collar" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Pet-collar</h5>
-                  <h5>$7</h5>
+                  <h5 class="product_type">Pet-collar</h5>
+                  <h5 class="product_amount">$7</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -700,13 +765,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/pet_bowl.png" alt="pet_bowl" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Pet-Bowl</h5>
-                  <h5>$10</h5>
+                  <h5 class="product_type">Pet-Bowl</h5>
+                  <h5 class="product_amount">$10</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -722,13 +790,16 @@
 
           <div class="product_second_row right_row">
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/pet_leash.png" alt="pet_leash" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Leash</h5>
-                  <h5>$25</h5>
+                  <h5 class="product_type">Leash</h5>
+                  <h5 class="product_amount">$25</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -742,13 +813,16 @@
             </div>
   
             <div class="product">
+              <div class="product_disable">
+                
+              </div>
               <div class="img_prodcut">
                 <img src="../media/pet_bandana.png" alt="pet_bandana" />
               </div>
               <div class="txt_product">
                 <div class="d-flex justify-content-between">
-                  <h5>Bandana</h5>
-                  <h5>$5</h5>
+                  <h5 class="product_type">Bandana</h5>
+                  <h5 class="product_amount">$5</h5>
                 </div>
               </div>
               <div class="des_product">
@@ -774,8 +848,7 @@
 
     </div>
 
-    <script src="../js/app.js">
-
-    </script>
+    <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
